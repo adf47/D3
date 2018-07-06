@@ -1,14 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
 
-# The secret number to guess.  This will start as an invalid value
-number = -1
-
-# Generate a secret number from 1 to 100
-def secret_num
-  rand(1..100)
-end
-
 # Determine fibonacci number
 def fibonacci(n)
   return  n  if ( 0..1 ).include? n
