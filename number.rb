@@ -34,7 +34,7 @@ end
 get '/fibonacci' do
   # Display the fib number here
   fib = params['Fibonacci']
-  if fib.to_i < 0
+  if fib.to_i < 0 || (fib.to_i.to_s != fib)
       fib = 1
   end
   fib_calc = fibonacci(fib.to_i)
@@ -45,7 +45,7 @@ end
 get '/factorial' do
   # Display the fac number here
   fac = params['Factorial']
-  if fac.to_i < 0
+  if fac.to_i < 0 || (fac.to_i.to_s != fac)
       fac = 1
   end
   fac_calc = factorial(fac.to_i)
