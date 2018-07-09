@@ -1,6 +1,6 @@
 <html>
   <head></head>
-  <body>
+  <body style="background-color: <%=GlobalState[:new_color]%>">
       <label>Fibonacci: </label>
       <form action="/fibonacci">
         <input type='text' name='Fibonacci' />
@@ -17,7 +17,7 @@
         <input type='submit' value='Hi' />
     </form>
 	<label>Enter New HTML Background Color: </label>
-    <form action="/changecolor">
+    <form action="/">
         <input type='text' name='Color' />
         <input type='submit' value='Change Color' />
     </form>
