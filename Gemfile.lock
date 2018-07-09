@@ -36,10 +36,11 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   sinatra
   sinatra-contrib
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
