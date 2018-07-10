@@ -77,6 +77,16 @@ get '/sayhi' do
   erb :say_hi, :locals => { name: uppercase_name }
 end
 
+get '/showcat' do 
+  cat_color = params['Cat color'].downcase
+  #seed = params['Seed']
+  ##seed = 3
+  ##prng = Random.new(seed)
+  num = rand 1..3
+  
+  erb :show_cat, :locals => { color: cat_color, num: num }
+end
+
 not_found do
   status 404
   erb :error
