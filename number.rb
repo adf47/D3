@@ -1,5 +1,9 @@
 require 'sinatra'
 require 'sinatra/reloader'
+<<<<<<< HEAD
+=======
+GlobalState = {}
+>>>>>>> d9f1d1af99009699cd143a7185d1a5c7843e5535
 
 # Determine fibonacci number
 def fibonacci(n)
@@ -27,14 +31,37 @@ get '/' do
   fib = params['Fibonacci']
   fac = params['Factorial']
   hi = params['Say hello']
+<<<<<<< HEAD
 
+=======
+  
+  # Array of all possible HTML color names
+  color_names = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","Darkorange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepSkyBlue","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","ForestGreen","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","GreenYellow","HoneyDew","HotPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","Lime","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"]
+  
+  # Check for parameter to persist color across refreshes and backreferences
+  unless params.has_key?(:Color)
+    new_color = GlobalState[:new_color]
+  else
+    new_color = params['Color']
+  end
+  
+  # Set to default if not in HTML color array
+  unless color_names.include? new_color
+    new_color = 'LightBlue'
+  end
+  GlobalState[:new_color] = new_color
+>>>>>>> d9f1d1af99009699cd143a7185d1a5c7843e5535
   erb :index, :locals => { fibonacci: fib, factorial: fac, say_hi: hi }
 end
 
 get '/fibonacci' do
   # Display the fib number here
   fib = params['Fibonacci']
+<<<<<<< HEAD
   if fib.to_i < 0
+=======
+  if fib.to_i < 0 || (fib.to_i.to_s != fib)
+>>>>>>> d9f1d1af99009699cd143a7185d1a5c7843e5535
       fib = 1
   end
   fib_calc = fibonacci(fib.to_i)
@@ -45,7 +72,11 @@ end
 get '/factorial' do
   # Display the fac number here
   fac = params['Factorial']
+<<<<<<< HEAD
   if fac.to_i < 0
+=======
+  if fac.to_i < 0 || (fac.to_i.to_s != fac)
+>>>>>>> d9f1d1af99009699cd143a7185d1a5c7843e5535
       fac = 1
   end
   fac_calc = factorial(fac.to_i)
@@ -61,7 +92,10 @@ get '/sayhi' do
   erb :say_hi, :locals => { name: uppercase_name }
 end
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d9f1d1af99009699cd143a7185d1a5c7843e5535
 not_found do
   status 404
   erb :error

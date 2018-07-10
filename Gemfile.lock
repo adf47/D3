@@ -36,10 +36,18 @@ GEM
 
 PLATFORMS
   ruby
+<<<<<<< HEAD
+=======
+  x86-mingw32
+>>>>>>> d9f1d1af99009699cd143a7185d1a5c7843e5535
 
 DEPENDENCIES
   sinatra
   sinatra-contrib
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.16.1
+=======
+   1.16.2
+>>>>>>> d9f1d1af99009699cd143a7185d1a5c7843e5535

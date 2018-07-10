@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>test_suite</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FibNegative</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td>-3</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Fibonacci(1) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FibString</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td>strawberry</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Fibonacci(1) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FibNormal</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td>7</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Fibonacci(7) = 13</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FibBlank</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Fibonacci(1) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FactNegative</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td>-3</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Factorial(1) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FactString</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td>banana</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Factorial(1) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FactNormal</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td>5</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Factorial(5) = 120</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FactBlank</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Factorial(1) = 1</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FactBackToMain</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td>3</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//label<datalist><option>//label</option><option>css=label</option></datalist></td><td>Fibonacci:</td>
+</tr>
+<tr><td>assertText</td><td>//label[2]<datalist><option>//label[2]</option></datalist></td><td>Factorial:</td>
+</tr>
+<tr><td>assertText</td><td>//label[3]<datalist><option>//label[3]</option></datalist></td><td>Say Hi:</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FibBackToMain</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Fibonacci<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option><option>name=Fibonacci</option></datalist></td><td>3</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option><option>xpath=(//input[@value='Calculate'])</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//label<datalist><option>//label</option><option>css=label</option></datalist></td><td>Fibonacci:</td>
+</tr>
+<tr><td>assertText</td><td>//label[2]<datalist><option>//label[2]</option></datalist></td><td>Factorial:</td>
+</tr>
+<tr><td>assertText</td><td>//label[3]<datalist><option>//label[3]</option></datalist></td><td>Say Hi:</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SayHiBackToMain</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td>justin</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//label<datalist><option>//label</option><option>css=label</option></datalist></td><td>Fibonacci:</td>
+</tr>
+<tr><td>assertText</td><td>//label[2]<datalist><option>//label[2]</option></datalist></td><td>Factorial:</td>
+</tr>
+<tr><td>assertText</td><td>//label[3]<datalist><option>//label[3]</option></datalist></td><td>Say Hi:</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SayHiLower</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td>bob</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Hello, BOB!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SayHiMix</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td>ChRiStOpHeR</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Hello, CHRISTOPHER!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SayHiBlank</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Hello, !</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SayHiNumber</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td>3</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Hello, 3!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FactTwoBoxes</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td>7</td>
+</tr>
+<tr><td>click</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td>5</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Factorial(5) = 120</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FibTwoBoxes</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td>5</td>
+</tr>
+<tr><td>click</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td>7</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Calculate']<datalist><option>//input[@value='Calculate']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Fibonacci(5) = 5</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SayHiTwoBoxes</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/<datalist><option>http://127.0.0.1:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Fibonacci<datalist><option>name=Fibonacci</option><option>//input[@name='Fibonacci']</option><option>//input</option><option>css=input[name="Fibonacci"]</option></datalist></td><td>5</td>
+</tr>
+<tr><td>click</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Say hello<datalist><option>name=Say hello</option><option>//input[@name='Say hello']</option><option>//form[3]/input</option><option>css=input[name="Say hello"]</option></datalist></td><td>bill</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Hi']<datalist><option>//input[@value='Hi']</option><option>//form[3]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>Hello, BILL!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">/hotdogErrorAndBackToMain</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://127.0.0.1:4567/hotdog<datalist><option>http://127.0.0.1:4567/hotdog</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h1<datalist><option>//h1</option><option>css=h1</option></datalist></td><td>ERROR</td>
+</tr>
+<tr><td>assertText</td><td>//p<datalist><option>//p</option><option>css=p</option></datalist></td><td>This page does not exist.</td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//label<datalist><option>//label</option><option>css=label</option></datalist></td><td>Fibonacci:</td>
+</tr>
+<tr><td>assertText</td><td>//label[2]<datalist><option>//label[2]</option></datalist></td><td>Factorial:</td>
+</tr>
+<tr><td>assertText</td><td>//label[3]<datalist><option>//label[3]</option></datalist></td><td>Say Hi:</td>
+</tr>
+</tbody></table>
+</body>
+</html>
