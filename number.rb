@@ -88,7 +88,13 @@ get '/showcat' do
   ##prng = Random.new(seed)
   num = rand 1..3
   
-  erb :show_cat, :locals => { color: cat_color, num: num }
+  # Only cat colors are black, white, grey, and orange
+  if cat_color == "black" || cat_color == "white" || cat_color == "grey" || cat_color == "orange"
+      erb :show_cat, :locals => { color: cat_color, num: num }
+  else
+      erb :cat_error
+  end
+  
 end
 
 not_found do
