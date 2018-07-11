@@ -81,12 +81,22 @@ get '/sayhi' do
   erb :say_hi, :locals => { name: uppercase_name }
 end
 
-get '/showcat' do 
-  cat_color = params['Cat color'].downcase
-  #seed = params['Seed']
-  ##seed = 3
-  ##prng = Random.new(seed)
-  num = rand 1..3
+get '/showcat' do
+  cat_color = params['Cat color']
+  if !cat_color.nil?
+    cat_color.downcase
+  end
+  seed = params['seed'].to_i
+  
+  if seed.nil?
+    prng = Random.new()
+    puts "#{seed} is a nil seed"
+  else
+    prng = Random.new(seed)
+    puts "#{seed} is a valid seed"
+  end
+  
+  num = prng.rand 1..3
   
   # Only cat colors are black, white, grey, and orange
   if cat_color == "black" || cat_color == "white" || cat_color == "grey" || cat_color == "orange"

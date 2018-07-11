@@ -342,5 +342,153 @@
 <tr><td>assertText</td><td>//label[3]<datalist><option>//label[3]</option></datalist></td><td>Say Hi:</td>
 </tr>
 </tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ValidColorEntered</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Color<datalist><option>name=Color</option><option>//input[@name='Color']</option><option>//form[4]/input</option><option>css=input[name="Color"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Color<datalist><option>name=Color</option><option>//input[@name='Color']</option><option>//form[4]/input</option><option>css=input[name="Color"]</option></datalist></td><td>Bisque</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Change color']<datalist><option>//input[@value='Change color']</option><option>//form[4]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//body@style<datalist><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option><option>//body@style</option></datalist></td><td>background-color: bisque;</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">InvalidColorEntered</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Color<datalist><option>name=Color</option><option>//input[@name='Color']</option><option>//form[4]/input</option><option>css=input[name="Color"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Color<datalist><option>name=Color</option><option>//input[@name='Color']</option><option>//form[4]/input</option><option>css=input[name="Color"]</option></datalist></td><td>InvalidColor</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Change color']<datalist><option>//input[@value='Change color']</option><option>//form[4]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//body@style<datalist><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>background-color: lightblue;</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ValidColorPersistsAcrossPageChanges</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Color<datalist><option>name=Color</option><option>//input[@name='Color']</option><option>//form[4]/input</option><option>css=input[name="Color"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Color<datalist><option>name=Color</option><option>//input[@name='Color']</option><option>//form[4]/input</option><option>css=input[name="Color"]</option></datalist></td><td>GoldenRod</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Change color']<datalist><option>//input[@value='Change color']</option><option>//form[4]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//body@style<datalist><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>background-color: goldenrod;</td>
+</tr>
+<tr><td>click</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Factorial<datalist><option>name=Factorial</option><option>//input[@name='Factorial']</option><option>//form[2]/input</option><option>css=input[name="Factorial"]</option></datalist></td><td>8</td>
+</tr>
+<tr><td>click</td><td>xpath=(//input[@value='Calculate'])[2]<datalist><option>xpath=(//input[@value='Calculate'])[2]</option><option>//form[2]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//body@style<datalist><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>background-color: goldenrod;</td>
+</tr>
+<tr><td>click</td><td>link=Back to main<datalist><option>link=Back to main</option><option>//a[contains(text(),'Back to main')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//body@style<datalist><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>background-color: goldenrod;</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ShowWhiteCats</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=white&amp;seed=2<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option><option>//img@src</option></datalist></td><td>img/white_cat_1.jpg</td>
+</tr>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=white&amp;seed=3<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=3</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/white_cat_3.jpg</td>
+</tr>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=white&amp;seed=10<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=10</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/white_cat_2.jpg</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ShowBlackCats</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=black&amp;seed=2<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=black&amp;seed=2</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/black_cat_1.jpg</td>
+</tr>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=black&amp;seed=3<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=3</option><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=black&amp;seed=3</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/black_cat_3.jpg</td>
+</tr>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=black&amp;seed=10<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=10</option><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=black&amp;seed=10</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/black_cat_2.jpg</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ShowGreyCats</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=grey&amp;seed=2<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=grey&amp;seed=2</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/grey_cat_1.jpg</td>
+</tr>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=grey&amp;seed=3<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=3</option><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=grey&amp;seed=3</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/grey_cat_3.jpg</td>
+</tr>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=grey&amp;seed=10<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=10</option><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=grey&amp;seed=10</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/grey_cat_2.jpg</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ShowOrangeCats</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=orange&amp;seed=2<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=orange&amp;seed=2</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/orange_cat_1.jpg</td>
+</tr>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=orange&amp;seed=3<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=3</option><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=orange&amp;seed=3</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/orange_cat_3.jpg</td>
+</tr>
+<tr><td>open</td><td>http://localhost:4567/showcat?Cat+color=orange&amp;seed=10<datalist><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=10</option><option>http://localhost:4567/showcat?Cat+color=white&amp;seed=2</option><option>http://localhost:4567/showcat?Cat+color=orange&amp;seed=10</option></datalist></td><td></td>
+</tr>
+<tr><td>assertAttribute</td><td>//img@src<datalist><option>//img@src</option><option>//body@style</option><option>//body</option><option>css=body</option><option>css=//body@background-color</option><option>//body@background-color</option></datalist></td><td>img/orange_cat_2.jpg</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">CatNotFoundError</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4567/<datalist><option>http://localhost:4567/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>name=Cat color<datalist><option>name=Cat color</option><option>//input[@name='Cat color']</option><option>//form[5]/input</option><option>css=input[name="Cat color"]</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>name=Cat color<datalist><option>name=Cat color</option><option>//input[@name='Cat color']</option><option>//form[5]/input</option><option>css=input[name="Cat color"]</option></datalist></td><td>banana</td>
+</tr>
+<tr><td>click</td><td>//input[@value='Show me the cat']<datalist><option>//input[@value='Show me the cat']</option><option>//form[5]/input[2]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h1<datalist><option>//h1</option><option>css=h1</option></datalist></td><td>These are not the cats you are looking for!</td>
+</tr>
+</tbody></table>
 </body>
 </html>
