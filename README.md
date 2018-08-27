@@ -1,4 +1,4 @@
-# D3 - RENT A CAt WEB APP WRITTEN IN RUBY AND SINATRA
+# D3 - RENT A CAT WEB APP WRITTEN IN RUBY AND SINATRA
 
 In addition to the requirements for D3 as it stands, we would like to add in these requirements:
 
